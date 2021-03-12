@@ -26,11 +26,13 @@ class PolyTreeNode
     end
 
     def remove_child(child_node)
-        self.child
-        og_parent = child_node
-        child_node.parent = nil 
-
-
+        og_child = self.children  #og_child is a array
+        if og_child.include?(child_node)
+            self.children = og_child.select{|child| child != child_node }
+            child_node.parent = nil 
+        else
+            raise "error  -> that is not a child"
+        end
     end
 
 end
