@@ -1,5 +1,6 @@
 require 'rspec'
 require '00_tree_node'
+require "Searchable"
 
 describe PolyTreeNode do
   let(:node1) { PolyTreeNode.new('root') }
