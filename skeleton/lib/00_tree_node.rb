@@ -36,9 +36,13 @@ class PolyTreeNode
     end
 
     def dfs(target_value)
-        return self if self.value == target_value    #value is self.value
-        og_child_arr = children
-        og_child_arr.each {|child| child.dfs(target_value)}
+        # stack = [self]
+        # while !stack.empty?
+            return self if self.value == target_value    #value is self.value
+            stack = self.children 
+            stack.each do |child| 
+                child.dfs(target_value)
+            end
         return nil
     end
 
