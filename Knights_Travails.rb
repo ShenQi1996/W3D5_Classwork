@@ -1,0 +1,4 @@
+class KnightPathFinder
+
+    
+end
